@@ -93,7 +93,7 @@ const ContactForm = () => {
               </h2>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <FaUser className="w-5 h-5 text-[#9d4edd] drop-shadow-[0_0_8px_rgba(157,78,221,0.5)]" />
+                  <FaUser className="w-5 h-5 text-[#9d4edd]" />
                 </div>
                 <motion.input
                   whileFocus="focus"
@@ -102,7 +102,7 @@ const ContactForm = () => {
                   name="user_name"
                   required
                   placeholder="Your Name"
-                  className="w-full pl-12 px-4 py-4 bg-black/50 backdrop-blur-sm border border-[#9d4edd] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9d4edd] focus:border-transparent text-white"
+                  className="w-full pl-12 px-4 py-4 bg-black/50 border border-[#9d4edd] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9d4edd] focus:border-transparent text-white"
                 />
               </div>
 
@@ -117,7 +117,7 @@ const ContactForm = () => {
                   name="user_email"
                   required
                   placeholder="Your Email"
-                  className="w-full pl-12 px-4 py-4 bg-black/50 backdrop-blur-sm border border-[#9d4edd] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9d4edd] focus:border-transparent text-white"
+                  className="w-full pl-12 px-4 py-4 bg-black/50 border border-[#9d4edd] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9d4edd] focus:border-transparent text-white"
                 />
               </div>
 
@@ -132,7 +132,7 @@ const ContactForm = () => {
                   required
                   placeholder="Your Message"
                   rows={4}
-                  className="w-full pl-12 px-4 py-4 bg-black/50 backdrop-blur-sm border border-[#9d4edd] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9d4edd] focus:border-transparent text-white resize-none"
+                  className="w-full pl-12 px-4 py-4 bg-black/50 border border-[#9d4edd] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9d4edd] focus:border-transparent text-white resize-none"
                 />
               </div>
 

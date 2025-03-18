@@ -1,22 +1,43 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
-
+import { motion } from "framer-motion";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
 
 const RecentProjects = () => {
   return (
     <div className="py-20" id="projects">
-      <h1 className="heading">
+      <motion.h1
+        className="heading"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         A small selection of{" "}
         <span className="text-[#9d4edd]">recent projects</span>
-      </h1>
+      </motion.h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
-        {projects.map((item) => (
-          <div
-            className="sm:h-[41rem] lg:min-h-[32.5rem] h-[28rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
+        {projects.map((item, index) => (
+          <motion.div
             key={item.id}
+            className="sm:h-[41rem] lg:min-h-[32.5rem] h-[28rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
+            initial={{
+              opacity: 0,
+              x: index % 2 === 0 ? -100 : 100,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.8,
+              delay: index * 0.2,
+              type: "spring",
+              stiffness: 50,
+            }}
           >
             <PinContainer
               title={item.title}
@@ -76,7 +97,7 @@ const RecentProjects = () => {
                 </div>
               </div>
             </PinContainer>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
